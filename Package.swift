@@ -16,7 +16,7 @@ let package = Package(
             targets: ["Backtrace"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/backtrace-labs/plcrashreporter.git", from: "1.5.4"),
+        .package(url: "https://github.com/microsoft/plcrashreporter.git", from: "1.10.1"),
     ],
     targets: [
         .target(
