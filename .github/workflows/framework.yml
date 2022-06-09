@@ -1,0 +1,18 @@
+name: Framework build
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    env:
+      PROJECT_NAME: Backtrace.xcodeproj
+      CONFIGURATION: Release
+      SCHEME: 
+    steps:
+      - uses: actions/checkout@v3
+      - run: brew bundle
+      - run: pod install
+      - run: xcodebuild -list -project "${PROJECT_NAME}"
+      - run: xcodebuild -project "${PROJECT_NAME}" -scheme "${SCHEME} -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO clean build
+
