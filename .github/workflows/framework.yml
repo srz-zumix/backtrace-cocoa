@@ -8,7 +8,7 @@ jobs:
     env:
       PROJECT_NAME: Backtrace.xcodeproj
       CONFIGURATION: Release
-      SCHEME: 
+      SCHEME: Backtrace-iOS-lib
     steps:
       - uses: actions/checkout@v3
       # - run: brew bundle
