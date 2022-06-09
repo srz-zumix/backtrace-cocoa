@@ -1,10 +1,11 @@
 name: Run tests
 
 on:
-  pull_request:
-    branches: 
-      - develop
-      - master
+  workflow_dispatch:
+  # pull_request:
+  #   branches: 
+  #     - develop
+  #     - master
 
 jobs:
   build:
