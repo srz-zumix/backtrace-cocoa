@@ -7,8 +7,10 @@ jobs:
     runs-on: macos-latest
     env:
       PROJECT_NAME: Backtrace.xcodeproj
+      PROJECT_NAME: Pods/Pods.xcodeproj
       CONFIGURATION: Release
       SCHEME: Backtrace-iOS-lib
+      SCHEME: Backtrace-iOS
     steps:
       - uses: actions/checkout@v3
       # - run: brew bundle
